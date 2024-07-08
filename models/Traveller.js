@@ -16,10 +16,17 @@ Traveller.init(
             allowNull: false,
         },
         email: {
-            type: DataTypes.EMAIL,
+            type: DataTypes.STRING,
             allowNull: false,
         },
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'traveller',
     }
 );
 
-module.exports = Traveller
+module.exports = Traveller;
